@@ -1,10 +1,16 @@
 # xcode-studio-mcp
 
-A unified MCP server that gives AI coding agents full control over the iOS development lifecycle: **build, deploy, see, interact, and verify** — all from a single tool.
+**Unified MCP server for Xcode + iOS Simulator** — build, deploy, screenshot, and interact with your iOS app from [Claude Code](https://claude.ai/claude-code), [Cursor](https://cursor.sh), or any MCP client.
 
-## What It Does
+Built in Swift. Single binary. No Node/Python runtime required.
 
-No more chaining multiple tools together. One MCP server handles the complete loop:
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Swift 6.0+](https://img.shields.io/badge/Swift-6.0+-orange.svg)](https://swift.org)
+[![MCP](https://img.shields.io/badge/MCP-compatible-green.svg)](https://modelcontextprotocol.io)
+
+## Why This Exists
+
+Today you need 2-3 separate tools to do the full iOS dev loop with an AI agent. **xcode-studio-mcp** combines them into one:
 
 ```
 Write code → Build → Deploy to Simulator → Screenshot → Tap/Type → Verify
@@ -128,6 +134,20 @@ Built in Swift with zero Node/Python runtime dependencies (idb CLI is only neede
 
 - **v0.1** (current): Core build + simulator tools
 - **v1.0**: Semantic UI navigation ("tap the Sign In button"), visual diff, Xcode project file manipulation, compound operations, SwiftUI preview capture
+
+## Related Projects
+
+| Project | What It Does | Difference |
+|---------|-------------|------------|
+| [XcodeBuildMCP](https://github.com/getsentry/XcodeBuildMCP) | Build + test only | No simulator UI interaction |
+| [mobile-mcp](https://github.com/mobile-next/mobile-mcp) | Cross-platform simulator UI | No Xcode build support |
+| [ios-simulator-mcp](https://github.com/joshuayoes/ios-simulator-mcp) | Simulator via IDB | No build, depends on IDB for everything |
+
+**xcode-studio-mcp** combines build _and_ interact into a single server.
+
+## Contributing
+
+PRs welcome. The codebase is ~750 lines of Swift organized into Tools, Services, and Models.
 
 ## License
 
