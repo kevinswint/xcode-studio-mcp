@@ -21,6 +21,48 @@ Write code → Build → Deploy to Simulator → Screenshot → Tap/Type → Ver
 | `simulator_type` | Type text into the currently focused field |
 | `simulator_describe` | Get the accessibility tree of the current screen (JSON) |
 
+## Tool Parameters
+
+### `xcode_build`
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `project_path` | Yes | Path to Xcode project directory, `.xcodeproj`, or `.xcworkspace` |
+| `scheme` | No | Build scheme (auto-detected if omitted) |
+| `configuration` | No | `Debug` (default) or `Release` |
+| `destination` | No | Build destination (defaults to booted simulator) |
+
+### `xcode_run`
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `project_path` | Yes | Path to Xcode project |
+| `bundle_identifier` | Yes | App bundle ID (e.g. `com.example.MyApp`) |
+| `scheme` | No | Build scheme (auto-detected) |
+| `simulator_udid` | No | Target simulator (defaults to booted) |
+
+### `simulator_screenshot`
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `simulator_udid` | No | Target simulator (defaults to booted) |
+
+### `simulator_tap`
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `x` | Yes | X coordinate |
+| `y` | Yes | Y coordinate |
+| `duration` | No | Hold duration in seconds (for long press) |
+| `simulator_udid` | No | Target simulator |
+
+### `simulator_type`
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `text` | Yes | Text to type |
+| `simulator_udid` | No | Target simulator |
+
+### `simulator_describe`
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `simulator_udid` | No | Target simulator |
+
 ## Quick Start
 
 ### Prerequisites
