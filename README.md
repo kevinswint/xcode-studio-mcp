@@ -1,6 +1,6 @@
 # xcode-studio-mcp
 
-**Unified MCP server for Xcode + iOS Simulator** — build, deploy, screenshot, and interact with your iOS app from [Claude Code](https://claude.ai/claude-code), [Cursor](https://cursor.sh), or any MCP client.
+**Unified MCP server for Xcode + iOS Simulator** — build, deploy, screenshot, and interact with your iOS app from [Claude Code](https://claude.ai/claude-code), [Codex](https://openai.com/codex/), [Cursor](https://cursor.sh), or any MCP client.
 
 Built in Swift. Single binary. No Node/Python runtime required.
 
